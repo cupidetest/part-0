@@ -1,0 +1,12 @@
+sequenceDiagram
+   
+    participant Browser
+    participant SPA
+    participant Server
+    
+ 
+    Browser->>SPA: Request SPA webpage
+    SPA->>Server: Request SPA content
+    Server->>SPA: Respond with SPA content
+    Browser->>SPA: Load SPA content
+    SPA->>Browser: Display SPA content
