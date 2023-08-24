@@ -1,0 +1,14 @@
+sequenceDiagram
+    participant browser
+    participant server
+
+    browser->>server: GET https://studies.cs.helsinki.fi/exampleapp/notes
+    activate server
+    server-->>browser: HTML document
+    deactivate server
+
+    browser->>server: sends user input data on clicking save button 
+    form->> action: creates 'new-node'
+    form->>method: sends 'POST'req to server
+                 : server responds with code 302(URL redirect)
+                 : reloads notes app to update css, js and json file 
