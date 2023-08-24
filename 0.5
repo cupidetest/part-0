@@ -1,0 +1,9 @@
+sequenceDiagram
+    participant browser
+    participant spa
+    participant server
+
+    browser->> spa : requests the spa webpage
+    spa->> browser : renders the spa webpage 
+    browser->>spa->> server : creates the new note when user clicks on save button
+                            : creates only one http request without rendering whole web page 
